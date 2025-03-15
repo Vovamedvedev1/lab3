@@ -20,7 +20,7 @@ public class BookReader {
     private List<SmsMessage> messages = new ArrayList<>();
 
     public void appendMessage(SmsMessage msg) {
-        this.messages.add(msg);
+        this.messages.add(0, msg);
     }
     public String getMessages() {
         String msgs = "";
