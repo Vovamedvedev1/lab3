@@ -24,7 +24,7 @@ public class BookReader {
     }
     public String getMessages() {
         String msgs = "";
-        for(SmsMessage msg: messages)
+        for(SmsMessage msg: this.messages)
             msgs += msg.getMessage();
         return msgs;
     }
