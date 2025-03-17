@@ -32,7 +32,7 @@ public class Main {
         System.out.println("-----------------------Example 3---------------------------------------");
         selectedBooks.stream().sorted(Comparator.comparingInt(Book::getPublishingYear)).forEach(book -> System.out.println(book.toString()));
         System.out.println("-----------------------Example 4---------------------------------------");
-        List<BookReader>readersJaneAusten = bookreaders.stream().filter(bookReader -> bookReader.getFavoriteBooks().stream().anyMatch(book -> book.getAuthor().equals("Jane Austen"))).collect(Collectors.toList());
+        Set<BookReader>readersJaneAusten = bookreaders.stream().filter(bookReader -> bookReader.getFavoriteBooks().stream().anyMatch(book -> book.getAuthor().equals("Jane Austen"))).collect(Collectors.toSet());
         System.out.println("Readers who have a book by Jane Austen in their favorites:");
         if (readersJaneAusten.isEmpty())
             System.out.print("No one likes to read books by Jane Austen");
